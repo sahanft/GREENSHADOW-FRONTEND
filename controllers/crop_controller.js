@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  // loadCropCodeToModel();
-  // loadCropDetailsTable();
+
 })
 
 function loadCropCodeToModel() {
