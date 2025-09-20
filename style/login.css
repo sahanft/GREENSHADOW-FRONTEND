@@ -1,0 +1,77 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+#login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/icons/farm.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#loginForm {
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.card {
+  background-color: rgba(56, 86, 32, 0.5);
+}
+
+#btnLogin {
+  width: fit-content;
+}
+
+#loginIconWrap {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+}
+
+#loginIcon {
+
+  height: 4rem;
+  width: 4rem;
+
+  background-image: url("/assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  margin: auto;
+
+}
+
+#btnWrap {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+}
+
+#btnLogin {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.label-color {
+  color: white;
+}

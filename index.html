@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Shadow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    
+    <!-- Side Bar -->
+     <div class="sidebar" id="slidebar">
+        <nav class="nav flex-column">
+            <!-- Dashboard -->
+            <a id="nav_dashboard" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/dashboard.png" alt="dashboard_image" width="20" height="20">
+                    </i>
+                </span>
+                <span class="description">Dashboard</span>
+            </a>
+            
+            <!-- Fields -->
+            <a href="#" class="nav-link" data-bs-toggle=collapse data-bs-target="#submenu1" aria-expanded="false" aria-controls="submenu1" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/field.png" alt="field_image" width="20" height="20">  
+                    </i>
+                    <span class="description">Fields <i class="bi bi-caret-down-fill"></i></span>
+                </span>
+             </a>
+             <!-- Sub Menu 1 -->
+             <div class="sub-menu collapse" id="submenu1">
+                <a id="nav_field_details" href="#" class="nav-link" style="padding-top: 4px;">
+                    <span class="icon">
+                        <i>
+                            <img src="/icons/field_crop.png" alt="field_crop_image" width="20" height="20">
+                        </i>
+                    </span>
+                    <span class="description">Field Details</span>
+                </a>
+                <a id="nav_field_crops" href="#" class="nav-link" style="padding-top: 4px;">
+                    <span class="icon">
+                        <i>
+                            <img src="/icons/field_crop.png" alt="field_crop_image" width="20" height="20">
+                        </i>
+                    </span>
+                    <span class="description">Field's Crops</span>
+                </a>
+                <a id="nav_field_staff" href="#" class="nav-link" style="padding-top: 4px;">
+                    <span class="icon">
+                        <i>
+                            <img src="/icons/field_crop.png" alt="field_staff_image" width="20" height="20">
+                        </i>
+                    </span>
+                    <span class="description">Field's Staff</span>
+                </a>
+             </div>
+
+             <!-- Crop -->
+            <a id="nav_crops" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/crop.png" alt="crop_image" width="20" height="20">
+                    </i>
+                    <span class="description">Crops</span>
+                </span>
+            </a>
+
+            <a id="nav_staff" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/staff.png" alt="staff_image" width="20" height="20">
+                    </i>
+                    <span class="description">Staff</span>
+                </span>
+            </a>
+             
+            <!-- Logs -->
+            <a href="#" class="nav-link" data-bs-toggle=collapse data-bs-target="#submenu3" aria-expanded="false" aria-controls="submenu3" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/log.png" alt="log_image" width="20" height="20">
+                    </i>
+                    <span class="description">Logs <i class="bi bi-caret-down-fill"></i></span>
+                </span>
+             </a>
+             <!-- Sub Menu 3 -->
+             <div class="sub-menu collapse" id="submenu3">
+                <a id="nav_log" href="#" class="nav-link" style="padding-top: 4px;">
+                    <span class="icon">
+                        <i>
+                            <img src="/icons/log_details.png" alt="log_details_image" width="20" height="20">
+                        </i>
+                    </span>
+                    <span class="description">Create Log</span>
+                </a>
+                <a id="nav_previous_logs" href="#" class="nav-link" style="padding-top: 4px;">
+                    <span class="icon">
+                        <i>
+                            <img src="/icons/log_details.png" alt="log_details_image" width="20" height="20">
+                        </i>
+                    </span>
+                    <span class="description">Previous Logs</span>
+                </a>
+             </div>
+
+             <!-- Vehicle -->
+            <a id="nav_vehicle" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/vehicle.png" alt="vehicle_image" width="20" height="20">
+                    </i>
+                    <span class="description">Vehicles</span>
+                </span>
+            </a>
+
+             <!-- Equipments -->
+             <a id="nav_equipment" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/equipment.png" alt="equipment_image" width="20" height="20">
+                    </i>
+                    <span class="description">Equipments</span>
+                </span>
+            </a>
+
+            <!-- Users -->
+            <a id="nav_users" href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/users.png" alt="users_image" width="20" height="20">
+                    </i>
+                    <span class="description">Users</span>
+                </span>
+            </a>
+
+            <!-- Logout -->
+            <a href="#" class="nav-link" style="padding-top: 4px;">
+                <span class="icon">
+                    <i>
+                        <img src="/icons/logout.png" alt="log-out-image" width="20" height="20">
+                    </i>
+                    <span class="description">Logout</span>
+                </span>
+            </a>
+        </nav>
+     </div> 
+     
+     <!-- Login Section -->
+<section id="login" >
+
+    <div id="loginForm">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <img src="/icons/green shadow.png" alt="green_shadow_image" width="300" height="100" class="img-fluid img-logo">
+                <form form action="assets/pages/home.html" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label label-color">Username</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label label-color">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+
+                    <div id="btnWrap">
+                        <div id="btnLogin">
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+     <!-- Main -->
+      <main class="main-content">
+        <!-- Dashboard -->
+        <section id="sec_dashboard">
+            <div class="container">
+                <div class="wrapper">
+                    <main class="content px-3 py-4 dashboard-section">
+                        <div class="container-fluid">
+                            <div class="mb-3">                               
+                                <div class="row">
+                                    <div class="col">
+                                        <h3 class="fw-bold fs-4 mb-3">Dashboard</h3>
+                                    </div>
+                                    <div class="col">
+                                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-12 col-md-4 ">
+                                        <div class="card border-0">
+                                            <div class="card-body py-4">
+                                                <h5 class="mb-2 fw-bold">
+                                                    Field Count
+                                                </h5>
+                                                <p class="mb-2 fw-bold">
+                                                    10
+                                                </p>
+                                                <div class="mb-0">
+                                                    <span class=" fw-bold">
+                                                        All over the island
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 ">
+                                        <div class="card  border-0">
+                                            <div class="card-body py-4">
+                                                <h5 class="mb-2 fw-bold">
+                                                    Crop Count
+                                                </h5>
+                                                <p class="mb-2 fw-bold">
+                                                    20
+                                                </p>
+                                                <div class="mb-0">
+                                                    <span class="fw-bold">
+                                                        Varieties across fields
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 ">
+                                        <div class="card border-0">
+                                            <div class="card-body py-4">
+                                                <h5 class="mb-2 fw-bold">
+                                                    Staff Count
+                                                </h5>
+                                                <p class="mb-2 fw-bold">
+                                                    50
+                                                </p>
+                                                <div class="mb-0">
+                                                    <span class="fw-bold">
+                                                        Involved in process
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fw-bold fs-4 my-3">Monthly log count
+                                </h3>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-8">
+                                            <canvas id="logChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                    </main>
+                </div>        
+            </div>  
+        </section>
+
+        <!-- Field Section -->
+        <section id="sec_field">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="span-text faculty-glyphic-regular">FIELD DETAILS</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add & Search Field -->
+                    <div class="col-5">
+                        <button id="btn_add_field" type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#model_field">Add a field</button>
+                    </div>
+
+                    <!--Field Details Modal -->
+                    <div class="modal fade" id="model_field" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="dataModalLabel">Add a field</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="dataForm">
+                                        <!-- Field Code -->
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <label for="code_model_field" class="">Field Code :</label>
+                                            </div>
+                                            <div class="col-10">
+                                                <label id="code_model_field"></label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name and Location -->
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <label for="name_model_field" class="form-label">Name:</label>
+                                                <input type="text" class="form-control" id="name_model_field" placeholder="Enter Name">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="location_model_field" class="form-label">Location:</label>
+                                                <input type="text" class="form-control" id="location_model_field" placeholder="Enter Location">
+                                            </div>
+                                        </div>
+
+                                        <!-- Size -->
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <label for="size_model_field" class="form-label">Size:</label>
+                                                <input type="text" class="form-control" id="size_model_field" placeholder="Enter Size">
+                                            </div>
+                                        </div>
+
+                                        <!-- Image One -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-6">
+                                                <label for="imageOne_model_field" class="form-label">Image One:</label>
+                                                <input type="file" class="form-control" id="imageOne_model_field" accept="image/*" onchange="previewImage(this, '#imageOnePreview_model_field')">
+                                            </div>
+                                            <div class="col-6">
+                                                <img id="imageOnePreview_model_field" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                            </div>
+                                        </div>
+
+                                        <!-- Image Two -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-6">
+                                                <label for="imageTwo_model_field" class="form-label">Image Two:</label>
+                                                <input type="file" class="form-control" id="imageTwo_model_field" accept="image/*" onchange="previewImage(this, '#imageTwoPreview_model_field')">
+                                            </div>
+                                            <div class="col-6">
+                                                <img id="imageTwoPreview_model_field" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="btn_save_field" type="button" class="btn btn-success">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Field Details Update Modal -->
+                    <div class="modal fade" id="modal_field_update" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="update_dataModalLabel">Update a field</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="dataForm_update">
+                                        <!-- Field Code -->
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <label for="code_model_field_update" class="">Field Code :</label>
+                                            </div>
+                                            <div class="col-10">
+                                                <label id="code_model_field_update"></label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name and Location -->
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <label for="name_model_field_update" class="form-label">Name:</label>
+                                                <input type="text" class="form-control" id="name_model_field_update" placeholder="Enter Name">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="location_model_field_update" class="form-label">Location:</label>
+                                                <input type="text" class="form-control" id="location_model_field_update" placeholder="Enter Location">
+                                            </div>
+                                        </div>
+
+                                        <!-- Size -->
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <label for="size_model_field_update" class="form-label">Size:</label>
+                                                <input type="text" class="form-control" id="size_model_field_update" placeholder="Enter Size">
+                                            </div>
+                                        </div>
+
+                                        <!-- Image One -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-6">
+                                                <label for="imageOne_model_field_update" class="form-label">Image One:</label>
+                                                <input type="file" class="form-control" id="imageOne_model_field_update" accept="image/*" onchange="previewImage(this, '#imageOnePreview_model_field_update')">
+                                                <input type="hidden" id="existingImage1" name="existingImage">
+                                            </div>
+                                            <div class="col-6">
+                                                <img id="imageOnePreview_model_field_update" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                            </div>
+                                        </div>
+
+                                        <!-- Image Two -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-6">
+                                                <label for="imageTwo_model_field_update" class="form-label">Image Two:</label>
+                                                <input type="file" class="form-control" id="imageTwo_model_field_update" accept="image/*" onchange="previewImage(this, '#imageTwoPreview_model_field_update')">
+                                            </div>
+                                            <div class="col-6">
+                                                <img id="imageTwoPreview_model_field_update" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                                <input type="hidden" id="existingImage2" name="existingImage">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="btn_update_field" type="button" class="btn btn-success">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input class="form-control txt-field-search" type="text" placeholder="Search by name...">
+                            <button type="button" class="btn btn-secondary btn-search">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Field Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped table-css">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Field Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Image One</th>
+                                        <th scope="col">Image Two</th>
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="field_details_Table_Body" class="imageTableBody">
+                                    <!-- Table rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <!-- Crop Section -->
+        <section id="sec_crop">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="span-text faculty-glyphic-regular custom-color-crop">CROPS</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add & Search Crop -->
+                    <div class="col-5">
+                        <button type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#modal_crop">Add a crop</button>
+                    </div>
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input class="form-control txt-field-search" type="text" placeholder="Search by name...">
+                            <button type="button" class="btn btn-secondary btn-search">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- Add a crop model -->
+                    <div class="modal fade" id="modal_crop" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add a Crop</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="cropForm">
+                                        <!-- Crop Code -->
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <label for="code_modal_crop" class="form-label">Crop Code:</label>
+                                            </div>
+                                            <div class="col-10">
+                                                <label id="code_modal_crop"></label>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Common Name and Scientific Name -->
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <label for="commonName_modal_crop" class="form-label">Common Name:</label>
+                                                <input type="text" class="form-control" id="commonName_modal_crop" placeholder="Enter Common Name">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="scientificName_modal_crop" class="form-label">Scientific Name:</label>
+                                                <input type="text" class="form-control" id="scientificName_modal_crop" placeholder="Enter Scientific Name">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mb-3">
+                                            <!-- Category -->
+                                            <div class="col-6">
+                                                <label for="category_modal_crop" class="form-label">Category:</label>
+                                                <select class="form-select" id="category_modal_crop">
+                                                    <option value="" selected disabled>Select Category</option>
+                                                    <option value="Vegetable">Vegetable</option>
+                                                    <option value="Fruit">Fruit</option>
+                                                    <option value="Grain">Grain</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                            <!-- Season -->
+                                            <div class="col-6">
+                                                <label for="season_modal_crop" class="form-label">Season:</label>
+                                                <select class="form-select" id="season_modal_crop">
+                                                    <option value="" selected disabled>Select Season</option>
+                                                    <option>Yala</option>
+                                                    <option>Maha</option>
+                                                    <option>Year-round</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Image -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-6">
+                                                <label for="image_modal_crop" class="form-label">Upload Image:</label>
+                                                <input type="file" class="form-control" id="image_modal_crop" accept="image/*" onchange="previewImage(this, '#imagePreview_modal_crop')">
+                                            </div>
+                                            <div class="col-6">
+                                                <img id="imagePreview_modal_crop" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="btn_save_crop" type="button" class="btn btn-success">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update a crop model -->
+                <div class="modal fade" id="modal_crop_update" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Update a Crop</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="cropFormupdate">
+                                    <!-- Crop Code -->
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <label for="code_modal_crop_update" class="form-label">Crop Code:</label>
+                                        </div>
+                                        <div class="col-10">
+                                            <label id="code_modal_crop_update"></label>
+                                        </div>
+                                    </div>
+                
+                                    <!-- Common Name and Scientific Name -->
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <label for="commonName_modal_crop_update" class="form-label">Common Name:</label>
+                                            <input type="text" class="form-control" id="commonName_modal_crop_update" placeholder="Enter Common Name">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="scientificName_modal_crop_update" class="form-label">Scientific Name:</label>
+                                            <input type="text" class="form-control" id="scientificName_modal_crop_update" placeholder="Enter Scientific Name">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row mb-3">
+                                        <!-- Category -->
+                                        <div class="col-6">
+                                            <label for="category_modal_crop_update" class="form-label">Category:</label>
+                                            <select class="form-select" id="category_modal_crop_update">
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option value="Vegetable">Vegetable</option>
+                                                <option value="Fruit">Fruit</option>
+                                                <option value="Grain">Grain</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                        <!-- Season -->
+                                        <div class="col-6">
+                                            <label for="season_modal_crop_update" class="form-label">Season:</label>
+                                            <select class="form-select" id="season_modal_crop_update">
+                                                <option value="" selected disabled>Select Season</option>
+                                                <option>Yala</option>
+                                                <option>Maha</option>
+                                                <option>Year-round</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                
+                                    <!-- Image -->
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-6">
+                                            <label for="image_modal_crop_update" class="form-label">Upload Image:</label>
+                                            <input type="file" class="form-control" id="image_modal_crop_update" accept="image/*" onchange="previewImage(this, '#imagePreview_modal_crop_update')">
+                                            <input type="hidden" id="existing_image_crop" name="existingImage">
+                                        </div>
+                                        <div class="col-6">
+                                            <img id="imagePreview_modal_crop_update" class="img-thumbnail mt-2" style="display:none; max-height: 150px;">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btn_update_crop" type="button" class="btn btn-success">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- Crop Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped custom-color-crop">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Crop Code</th>
+                                        <th scope="col">Common Name</th>
+                                        <th scope="col">Scientific Name</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Season</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Action</th>                                        
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="crop_details_table_body" class="imageTableBody">
+                                    <!-- Table rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Section -->
+        <section id="sec_staff">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="span-text faculty-glyphic-regular custom-color-staff">STAFF DETAILS</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add & Search Staff -->
+                    <div class="col-5">
+                        <button type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#modal_staff">Add a staff</button>
+                    </div>
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input class="form-control txt-field-search" type="text" placeholder="Search by name...">
+                            <button type="button" class="btn btn-secondary btn-search">Search</button>
+
+                            <!--Add Staff Modal -->
+                            <div class="modal fade" id="modal_staff" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staffModalLabel">Add Staff</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="staffForm">
+                                                <!-- Staff Id -->
+                                                <div class="row mb-3">
+                                                    <div class="col-2">
+                                                        <label for="id_modal_staff" class="form-label">Staff ID:</label>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <label id="id_modal_staff"></label>
+                                                    </div>
+                                                </div>
+                                                   
+                                                <div class="row">
+                                                    <!-- First Name -->
+                                                    <div class="col mb-3">
+                                                        <label for="firstName_modal_staff" class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" id="firstName_modal_staff" placeholder="Enter first name">
+                                                    </div>
+
+                                                    <!-- Last Name -->
+                                                    <div class="col mb-3">
+                                                        <label for="lastName_modal_staff" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName_modal_staff" placeholder="Enter last name">
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="row">
+                                                    <!-- Joined Date -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="joinedDate_modal_staff" class="form-label">Joined Date</label>
+                                                        <input type="date" class="form-control" id="joinedDate_modal_staff">
+                                                    </div>
+
+                                                    <!-- Birth Date -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="birthDate_modal_staff" class="form-label">Birth Date</label>
+                                                        <input type="date" class="form-control" id="birthDate_modal_staff">
+                                                    </div>
+
+                                                    <!-- Gender -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="gender_modal_staff" class="form-label">Gender</label>
+                                                        <select class="form-select" id="gender_modal_staff">
+                                                            <option value="" selected disabled>Select Gender</option>
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <!-- phone -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="phone_modal_staff" class="form-label">Phone</label>
+                                                        <input type="text" class="form-control" id="phone_modal_staff" placeholder="Enter phone">
+                                                    </div>
+                                                    <!-- email -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="email_modal_staff" class="form-label">Email</label>
+                                                        <input type="text" class="form-control" id="email_modal_staff" placeholder="Enter email">
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="row">
+                                                    <!-- Designation -->
+                                                    <div class="col mb-3">
+                                                        <label for="designation_modal_staff" class="form-label">Designation</label>
+                                                        <select class="form-select" id="designation_modal_staff">
+                                                            <option value="" selected disabled>Select Designation</option>
+                                                            <option>Manager</option>
+                                                            <option>Senior Assistant Manager</option>
+                                                            <option>Assistant Manager</option>
+                                                            <option>Admin and HR Staff</option>
+                                                            <option>Office Assistant</option>
+                                                            <option>Senior Agronomist</option>
+                                                            <option>Agronomist</option>
+                                                            <option>Soil Scientist</option>
+                                                            <option>Senior Technician</option>
+                                                            <option>Technician</option>
+                                                            <option>Supervisor</option>
+                                                            <option>Labor</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Role -->
+                                                    <div class="col mb-3">
+                                                        <label for="role_modal_staff" class="form-label">Role</label>
+                                                        <select class="form-select" id="role_modal_staff">
+                                                            <option value="" selected disabled>Select Role</option>
+                                                            <option>MANAGER</option>
+                                                            <option>ADMINISTRATIVE</option>
+                                                            <option>SCIENTIST</option>
+                                                            <option>OTHER</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <!-- Address Fields -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address1_modal_staff" class="form-label">Address Line 1</label>
+                                                        <input type="text" class="form-control" id="address1_modal_staff" placeholder="Enter address line 1">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address2_modal_staff" class="form-label">Address Line 2</label>
+                                                        <input type="text" class="form-control" id="address2_modal_staff" placeholder="Enter address line 2">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address3_modal_staff" class="form-label">Address Line 3</label>
+                                                        <input type="text" class="form-control" id="address3_modal_staff" placeholder="Enter address line 3">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address4_modal_staff" class="form-label">Address Line 4</label>
+                                                        <input type="text" class="form-control" id="address4_modal_staff" placeholder="Enter address line 4">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address5_modal_staff" class="form-label">Address Line 5</label>
+                                                        <input type="text" class="form-control" id="address5_modal_staff" placeholder="Enter address line 5">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="btn_save_staff" type="button" class="btn btn-primary" form="staffForm">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Update Staff Modal -->
+                            <div class="modal fade" id="modal_staff_update" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staffModalLabel_update">Update Staff</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="staffForm_update">
+                                                <!-- Staff Id -->
+                                                <div class="row mb-3">
+                                                    <div class="col-2">
+                                                        <label for="id_modal_staff_update" class="form-label">Staff ID:</label>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <label id="id_modal_staff_update"></label>
+                                                    </div>
+                                                </div>
+                                                   
+                                                <div class="row">
+                                                    <!-- First Name -->
+                                                    <div class="col mb-3">
+                                                        <label for="firstName_modal_staff_update" class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" id="firstName_modal_staff_update" placeholder="Enter first name">
+                                                    </div>
+
+                                                    <!-- Last Name -->
+                                                    <div class="col mb-3">
+                                                        <label for="lastName_modal_staff_update" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName_modal_staff_update" placeholder="Enter last name">
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="row">
+                                                    <!-- Joined Date -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="joinedDate_modal_staff_update" class="form-label">Joined Date</label>
+                                                        <input type="date" class="form-control" id="joinedDate_modal_staff_update">
+                                                    </div>
+
+                                                    <!-- Birth Date -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="birthDate_modal_staff_update" class="form-label">Birth Date</label>
+                                                        <input type="date" class="form-control" id="birthDate_modal_staff_update">
+                                                    </div>
+
+                                                    <!-- Gender -->
+                                                    <div class="col-4 mb-3">
+                                                        <label for="gender_modal_staff_update" class="form-label">Gender</label>
+                                                        <select class="form-select" id="gender_modal_staff_update">
+                                                            <option value="" selected disabled>Select Gender</option>
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <!-- phone -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="phone_modal_staff_update" class="form-label">Phone</label>
+                                                        <input type="text" class="form-control" id="phone_modal_staff_update" placeholder="Enter phone">
+                                                    </div>
+                                                    <!-- email -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="email_modal_staff_update" class="form-label">Email</label>
+                                                        <input type="text" class="form-control" id="email_modal_staff_update" placeholder="Enter email">
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="row">
+                                                    <!-- Designation -->
+                                                    <div class="col mb-3">
+                                                        <label for="designation_modal_staff_update" class="form-label">Designation</label>
+                                                        <select class="form-select" id="designation_modal_staff_update">
+                                                            <option value="" selected disabled>Select Designation</option>
+                                                            <option>Manager</option>
+                                                            <option>Senior Assistant Manager</option>
+                                                            <option>Assistant Manager</option>
+                                                            <option>Admin and HR Staff</option>
+                                                            <option>Office Assistant</option>
+                                                            <option>Senior Agronomist</option>
+                                                            <option>Agronomist</option>
+                                                            <option>Soil Scientist</option>
+                                                            <option>Senior Technician</option>
+                                                            <option>Technician</option>
+                                                            <option>Supervisor</option>
+                                                            <option>Labor</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Role -->
+                                                    <div class="col mb-3">
+                                                        <label for="role_modal_staff_update" class="form-label">Role</label>
+                                                        <select class="form-select" id="role_modal_staff_update">
+                                                            <option value="" selected disabled>Select Role</option>
+                                                            <option>MANAGER</option>
+                                                            <option>ADMINISTRATIVE</option>
+                                                            <option>SCIENTIST</option>
+                                                            <option>OTHER</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <!-- Address Fields -->
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address1_modal_staff_update" class="form-label">Address Line 1</label>
+                                                        <input type="text" class="form-control" id="address1_modal_staff_update" placeholder="Enter address line 1">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address2_modal_staff_update" class="form-label">Address Line 2</label>
+                                                        <input type="text" class="form-control" id="address2_modal_staff_update" placeholder="Enter address line 2">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address3_modal_staff_update" class="form-label">Address Line 3</label>
+                                                        <input type="text" class="form-control" id="address3_modal_staff_update" placeholder="Enter address line 3">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address4_modal_staff_update" class="form-label">Address Line 4</label>
+                                                        <input type="text" class="form-control" id="address4_modal_staff_update" placeholder="Enter address line 4">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label for="address5_modal_staff_update" class="form-label">Address Line 5</label>
+                                                        <input type="text" class="form-control" id="address5_modal_staff_update" placeholder="Enter address line 5">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="btn_update_staff" type="button" class="btn btn-primary" form="staffForm_update">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Staff Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped custom-color-staff">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Staff Id</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Joined Date</th>
+                                        <th scope="col">Birth Date</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Designation</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Address L1</th>
+                                        <th scope="col">Address L2</th>
+                                        <th scope="col">Address L3</th>
+                                        <th scope="col">Address L4</th>
+                                        <th scope="col">Address L5</th>
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="staff_details_table_body">
+                                    <!-- Table rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <!-- Vehicle Section -->
+        <section id="sec_vehicle">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="span-text faculty-glyphic-regular custom-color-vehicle">VEHICLES</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add & Search Vehicle -->
+                    <div class="col-5">
+                        <button type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#vehicle_modal">Add a Vehicle</button>
+                    </div>
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input class="form-control txt-field-search" type="text" placeholder="Search by name...">
+                            <button type="button" class="btn btn-secondary btn-search">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Vehicle Modal -->
+                <div class="modal fade" id="vehicle_modal" tabindex="-1" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="vehicleModalLabel">Add Vehicle</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="vehicleForm">
+
+                                    <!-- Vehicle Code -->
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <label for="code_modal_vehicle" class="form-label">Vehicle Code:</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <label id="code_modal_vehicle"></label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Vehicle Number -->
+                                        <div class="col mb-3">
+                                            <label for="vehicleNumber_modal_vehicle" class="form-label">Vehicle Number</label>
+                                            <input type="text" class="form-control" id="vehicleNumber_modal_vehicle" placeholder="Enter vehicle number">
+                                        </div>
+                
+                                        <!-- Category -->
+                                        <div class="col mb-3">
+                                            <label for="category_modal_vehicle" class="form-label">Category</label>
+                                            <select class="form-select" id="category_modal_vehicle">
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option>Light</option>
+                                                <option>Heavy</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Fuel Type -->
+                                        <div class="col mb-3">
+                                            <label for="fuelType_modal_vehicle" class="form-label">Fuel Type</label>
+                                            <select class="form-select" id="fuelType_modal_vehicle">
+                                                <option value="" selected disabled>Select Fuel Type</option>
+                                                <option>Petrol</option>
+                                                <option>Diesel</option>
+                                                <option>Electric</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                
+                                        <!-- Remarks -->
+                                        <div class="col mb-3">
+                                            <label for="remarks_modal_vehicle" class="form-label">Remarks</label>
+                                            <select class="form-select" id="remarks_modal_vehicle">
+                                                <option value="" selected disabled>Select Remarks</option>
+                                                <option>Good Condition</option>
+                                                <option>Needs Maintenance</option>
+                                                <option>Out of Service</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Status -->
+                                        <div class="col mb-3">
+                                            <label for="status_modal_vehicle" class="form-label">Status</label>
+                                            <select class="form-select" id="status_modal_vehicle">
+                                                <option value="" selected disabled>Select Status</option>
+                                                <option>Available</option>
+                                                <option>Not Available</option>
+                                            </select>
+                                        </div>
+                
+                                        <!-- Staff ID -->
+                                        <div class="col mb-3">
+                                            <label for="staffId_modal_vehicle" class="form-label">Staff ID</label>
+                                            <select class="form-select" id="staffId_modal_vehicle"></select>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btn_save_vehicle" type="button" class="btn btn-primary" form="vehicleForm">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update Vehicle Modal -->
+                <div class="modal fade" id="vehicle_modal_update" tabindex="-1" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="vehicleModalLabel_update">Update Vehicle</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="vehicleForm_update">
+
+                                    <!-- Vehicle Code -->
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <label for="code_modal_vehicle_update" class="form-label">Vehicle Code:</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <label id="code_modal_vehicle_update"></label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Vehicle Number -->
+                                        <div class="col mb-3">
+                                            <label for="vehicleNumber_modal_vehicle_update" class="form-label">Vehicle Number</label>
+                                            <input type="text" class="form-control" id="vehicleNumber_modal_vehicle_update" placeholder="Enter vehicle number">
+                                        </div>
+                
+                                        <!-- Category -->
+                                        <div class="col mb-3">
+                                            <label for="category_modal_vehicle_update" class="form-label">Category</label>
+                                            <select class="form-select" id="category_modal_vehicle_update">
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option>Light</option>
+                                                <option>Heavy</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Fuel Type -->
+                                        <div class="col mb-3">
+                                            <label for="fuelType_modal_vehicle_update" class="form-label">Fuel Type</label>
+                                            <select class="form-select" id="fuelType_modal_vehicle_update">
+                                                <option value="" selected disabled>Select Fuel Type</option>
+                                                <option>Petrol</option>
+                                                <option>Diesel</option>
+                                                <option>Electric</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                
+                                        <!-- Remarks -->
+                                        <div class="col mb-3">
+                                            <label for="remarks_modal_vehicle_update" class="form-label">Remarks</label>
+                                            <select class="form-select" id="remarks_modal_vehicle_update">
+                                                <option value="" selected disabled>Select Remarks</option>
+                                                <option>Good Condition</option>
+                                                <option>Needs Maintenance</option>
+                                                <option>Out of Service</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Status -->
+                                        <div class="col mb-3">
+                                            <label for="status_modal_vehicle_update" class="form-label">Status</label>
+                                            <select class="form-select" id="status_modal_vehicle_update">
+                                                <option value="" selected disabled>Select Status</option>
+                                                <option>Available</option>
+                                                <option>Not Available</option>
+                                            </select>
+                                        </div>
+                
+                                        <!-- Staff ID -->
+                                        <div class="col mb-3">
+                                            <label for="staffId_modal_vehicle_update" class="form-label">Staff ID</label>
+                                            <select class="form-select" id="staffId_modal_vehicle_update"></select>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btn_update_vehicle" type="button" class="btn btn-primary" form="vehicleForm">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Vehicle Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped custom-color-vehicle">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Vehicle Code</th>
+                                        <th scope="col">Number</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Fuel Type</th>
+                                        <th scope="col">Remarks</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Staff Id</th>
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="vehicle_details_table_body" class="imageTableBody">
+                                    <!-- Table rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="sec_equipment">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="faculty-glyphic-regular custom-color-equipment">EQUIPMENTS</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add & Search Equipment -->
+                    <div class="col-5">
+                        <button type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#modal_equipment">Add a Equipment</button>
+                    </div>
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input class="form-control txt-field-search" type="text" placeholder="Search by name...">
+                            <button type="button" class="btn btn-secondary btn-search">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Add Equipment Modal -->
+                <div class="modal fade" id="modal_equipment" tabindex="-1" aria-labelledby="equipmentModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="equipmentModalLabel">Add Equipment</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="equipmentForm">
+                                    <!-- Equipment ID -->
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <label for="equipmentId_modal" class="form-label">Equipment ID:</label>
+                                        </div>
+                                        <div class="col-10">
+                                            <label id="equipmentId_modal"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Equipment Name -->
+                                        <div class="col-6 mb-3">
+                                            <div class="col-12">
+                                                <label for="name_modal_equipment" class="form-label">Name:</label>
+                                                <input type="text" class="form-control" id="name_modal_equipment" placeholder="Enter Equipment Name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="row">
+                                        <!-- Type -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="type_modal_equipment" class="form-label">Type:</label>
+                                                <select class="form-select" id="type_modal_equipment">
+                                                    <option value="" selected disabled>Select Type</option>
+                                                    <option>Light</option>
+                                                    <option>Heavy</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <!-- Status -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="status_modal_equipment" class="form-label">Status:</label>
+                                                <select class="form-select" id="status_modal_equipment">
+                                                    <option value="" selected disabled>Select Status</option>
+                                                    <option>Operational</option>
+                                                    <option>Maintenance</option>
+                                                    <option>Out of Order</option>
+                                                </select>
+                                            </div>
+                                        </div>           
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Field Code -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="fieldCode_modal_equipment" class="form-label">Field Code:</label>
+                                                <select class="form-select" id="fieldCode_modal_equipment">
+                                                    <option value="" selected disabled>Select Field Code</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Staff ID -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="staffId_modal_equipment" class="form-label">Staff ID:</label>
+                                                <select class="form-select" id="staffId_modal_equipment">
+                                                    <option value="" selected disabled>Select Staff ID</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btn_save_equipment" type="button" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Update Equipment Modal -->
+                <div class="modal fade" id="modal_equipment_update" tabindex="-1" aria-labelledby="equipmentModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="equipmentModalLabel_update">Update Equipment</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="equipmentForm_update">
+                                    <!-- Equipment ID -->
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <label for="equipmentId_modal_update" class="form-label">Equipment ID:</label>
+                                        </div>
+                                        <div class="col-10">
+                                            <label id="equipmentId_modal_update"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Equipment Name -->
+                                        <div class="col-6 mb-3">
+                                            <div class="col-12">
+                                                <label for="name_modal_equipment_update" class="form-label">Name:</label>
+                                                <input type="text" class="form-control" id="name_modal_equipment_update" placeholder="Enter Equipment Name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="row">
+                                        <!-- Type -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="type_modal_equipment_update" class="form-label">Type:</label>
+                                                <select class="form-select" id="type_modal_equipment_update">
+                                                    <option value="" selected disabled>Select Type</option>
+                                                    <option>Light</option>
+                                                    <option>Heavy</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <!-- Status -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="status_modal_equipment_update" class="form-label">Status:</label>
+                                                <select class="form-select" id="status_modal_equipment_update">
+                                                    <option value="" selected disabled>Select Status</option>
+                                                    <option>Operational</option>
+                                                    <option>Maintenance</option>
+                                                    <option>Out of Order</option>
+                                                </select>
+                                            </div>
+                                        </div>           
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <!-- Field Code -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="fieldCode_modal_equipment_update" class="form-label">Field Code:</label>
+                                                <select class="form-select" id="fieldCode_modal_equipment_update">
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Staff ID -->
+                                        <div class="col row mb-3">
+                                            <div class="col-12">
+                                                <label for="staffId_modal_equipment" class="form-label">Staff ID:</label>
+                                                <select class="form-select" id="staffId_modal_equipment_update">    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btn_update_equipment" type="button" class="btn btn-success">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Equipment Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped custom-color-equipment">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Equipment Id</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Staff Id</th>
+                                        <th scope="col">Field Code</th>
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="equipment_details_table_body" class="imageTableBody">
+                                    <!-- Table rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+         <!-- Users Section -->
+         <section id="sec_users">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="faculty-glyphic-regular custom-color-equipment">Users</span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <div class="row field-div-2">
+                    <!-- Add User -->
+                    <div class="col-5">
+                        <button type="button" class="btn btn-success btn-add-a-field" data-bs-toggle="modal" data-bs-target="#modal_add_user">Add a User</button>
+                    </div>
+                </div>
+
+                <!-- Modal Add User -->
+                <div class="modal fade" id="modal_add_user" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="userModalLabel">Add User</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="userForm">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <label for="email_modal_user" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email_modal_user" placeholder="Enter your email" required>
+                                    </div>
+                                    
+                                    <!-- Password Input -->
+                                    <div class="mb-3">
+                                        <label for="password_modal_user" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password_modal_user" placeholder="Enter your password" required>
+                                    </div>
+
+                                    <!-- Confirm Password Input -->
+                                    <div class="mb-3">
+                                        <label for="confirmPassword_modal_user" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirmPassword_modal_user" placeholder="Confirm your password" required>
+                                    </div>
+
+                                    <!-- Role Selection -->
+                                    <div class="mb-3">
+                                        <label for="role_modal_user" class="form-label">Role</label>
+                                        <select id="role_modal_user" class="form-select" required>
+                                            <option value="" disabled selected>Select a role</option>
+                                            <option value="MANAGER">MANAGER</option>
+                                            <option value="ADMINISTRATIVE">ADMINISTRATIVE</option>
+                                            <option value="SCIENTIST">SCIENTIST</option>
+                                        </select>
+                                    </div>
+
+                                    <button id="btn_save_user" type="button" class="btn btn-primary w-100">Add User</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users Table -->
+                <div class="row field-div-3">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table">
+                            <table class="table table-striped custom-color-equipment">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="users_table_body" class="imageTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+
+        <!-- Field's Crop Section -->
+        <section id="sec_field_crops" class="sec-field-crops">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="font-size span-text faculty-glyphic-regular custom-color-field-crop">
+                            FIELD'S CROPS
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+        
+                <div class="row field-div-4">
+                    <!-- Column 1 - Select a Field -->
+                    <div class="col-12 col-md-3">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Select a field</span>
+                            <form>
+                                <!-- Field Code Selection -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_fc_fieldCode" class="form-label small-label">Field Code :</label>
+                                            <select class="form-select form-select-sm" id="sel_fc_fieldCode">
+                                                <option selected disabled>Select a field</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Name and Location -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_name" class="form-label small-label">Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_name"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_location" class="form-label small-label">Location :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_location"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Images -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_fc_imageOne" class="form-label small-label">Image One :</label>
+                                            <img id="img_fc_imageOne" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_fc_imageTwo" class="form-label small-label">Image Two :</label>
+                                            <img id="img_fc_imageTwo" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Column 2 - Add a Crop -->
+                    <div class="col-12 col-md-3">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Add a crop to selected field</span>
+                            <form>
+                                <!-- Select Crop -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_fc_cropCode" class="form-label small-label">Select Field :</label>
+                                            <select class="form-select form-select-sm" id="sel_fc_cropCode">
+                                                <option selected disabled>Select a crop</option>   
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Crop Details -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_commonName" class="form-label small-label">Common Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_commonName"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_scientificName" class="form-label small-label">Scientific Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_scientificName"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_category" class="form-label small-label">Category :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_category"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fc_season" class="form-label small-label">Season :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fc_season"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Image and Button -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_fc_image" class="form-label small-label">Image :</label>
+                                            <img id="img_fc_image" src="" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-center align-items-center">
+                                        <div class="field-container">
+                                            <button id="btn_fc_add" type="button" class="btn btn-primary btn-sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Column 3 - Field Crops Table -->
+                    <div class="col-12 col-md-6">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Field's crops table</span>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-css custom-color-field-crop">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field Code</th>
+                                            <th scope="col">Crop Code</th>
+                                            <th scope="col">Common Name</th>
+                                            <th scope="col">Scientific Name</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Season</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody_fc_fieldCrops" class="imageTableBody">
+                                        <!-- Table rows go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Field's Staff Section -->
+        <section id="sec_field_staff" class="sec-field-crops">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="font-size span-text faculty-glyphic-regular custom-color-staff small-text">
+                            FIELD'S STAFF
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+        
+                <div class="row field-div-4">
+                    <!-- Column 1 - Select a Field -->
+                    <div class="col-12 col-md-3">
+                        <div class="bordered-div-2">
+                            <span class="text-center d-block font-weight-bold spans-text">Select a field</span>
+                            <form>
+                                <!-- Field Code Selection -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_fs_fieldCode" class="form-label small-label">Field Code :</label>
+                                            <select class="form-select form-select-sm" id="sel_fs_fieldCode">
+                                                <option selected disabled>Select a field</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Name and Location -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_name" class="form-label small-label">Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_name"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_location" class="form-label small-label">Location :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_location"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Images -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_fs_imageOne" class="form-label small-label">Image One :</label>
+                                            <img id="img_fs_imageOne" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="imf_fs_imageTwo" class="form-label small-label">Image Two :</label>
+                                            <img id="img_fs_imageTwo" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Column 2 - Add a Staff -->
+                    <div class="col-12 col-md-3">
+                        <div class="bordered-div-2">
+                            <span class="text-center d-block font-weight-bold spans-text">Add a staff to selected field</span>
+                            <form>
+                                <!-- Select Staff -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_fs_staffId" class="form-label small-label">Staff Id :</label>
+                                            <select class="form-select form-select-sm" id="sel_fs_staffId">
+                                                <option selected disabled>Select a member</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Staff Details -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_firstName" class="form-label small-label">First Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_firstName"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_lastName" class="form-label small-label">Last Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_lastName"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_designation" class="form-label small-label">Designation :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_designation"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_fs_role" class="form-label small-label">Role :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_fs_role"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Button -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="field-container">
+                                            <button id="btn_fs_add" type="button" class="btn btn-primary btn-sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Column 3 - Field Staff Table -->
+                    <div class="col-12 col-md-6">
+                        <div class="bordered-div-2">
+                            <span class="text-center d-block font-weight-bold spans-text">Field's staff table</span>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-css custom-color-field-crop">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field Code</th>
+                                            <th scope="col">Staff Id</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Designation</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody_fs_fieldstaff" class="imageTableBody">
+                                        <!-- Table rows go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Create Log Section -->
+        <section id="sec_log">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="font-size span-text faculty-glyphic-regular custom-color-field-crop">
+                            CREATE LOG
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+
+                <div class="row g-1 mb-3">
+                    <div class="col-6">
+                        <div class="field-container d-flex">
+                            <span class="me-2 span-text-log">Log Code :</span>
+                            <label class="form-control fixed-height-label small-label" id="lbl_cl_logCode" style="width: 150px;"></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="field-container d-flex justify-content-end">
+                            <span class="me-2 span-text-log">Date :</span>
+                            <label class="form-control fixed-height-label small-label" id="lbl_cl_date" style="width: 150px;"></label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Fields -->
+                <div class="row field-div-4">
+                    <!-- Add field to log form -->
+                    <div class="col-12 col-md-4">
+                        <!-- Form Section -->
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Add a field</span>
+                            <div class="row">
+                                <div class="col-4"></div>
+                            </div>
+                            <form>
+                                <!-- Field Code Selection -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_cl_fieldCode" class="form-label small-label">Field Code :</label>
+                                            <select class="form-select form-select-sm" id="sel_cl_fieldCode">
+                                                <option selected disabled>Select a field</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Name and Location -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_name" class="form-label small-label">Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_name"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_location" class="form-label small-label">Location :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_location"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Images -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_cl_imageOne" class="form-label small-label">Image One :</label>
+                                            <img id="img_cl_imageOne" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_cl_imageTwo" class="form-label small-label">Image Two :</label>
+                                            <img id="img_cl_imageTwo" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 mb-1">
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="field-container">
+                                            <button id="btn_cl_field_add" type="button" class="btn btn-primary btn-sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Log's fields table -->
+                    <div class="col-12 col-md-8">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Log fields</span>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-css custom-color-field-crop">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field Code</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Image One</th>
+                                            <th scope="col">Image Two</th>
+                                            <th scope="col">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody_cl_fields" class="imageTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+
+                <!-- Add Crops -->
+                <div class="row field-div-4">
+                    <!-- Add crop to log form -->
+                    <div class="col-12 col-md-4">
+                        <!-- Form Section -->
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Add a crop</span>
+                            <div class="row">
+                                <div class="col-4"></div>
+                            </div>
+                            <form>
+                                <!-- Crop Code Selection -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_cl_cropCode" class="form-label small-label">Crop Code :</label>
+                                            <select class="form-select form-select-sm" id="sel_cl_cropCode">
+                                                <option selected disabled>Select a crop</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Names -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_commonName" class="form-label small-label">Common Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_commonName"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_scientificName" class="form-label small-label">Scientific Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_scientificName"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_category" class="form-label small-label">Category :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_category"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_season" class="form-label small-label">Season :</label>
+                                            <label id="lbl_cl_season" class="form-control fixed-height-label small-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Images -->
+                                <div class="row g-0 mb-1 justify-content-center">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="img_cl_image" class="form-label small-label">Image :</label>
+                                            <img id="img_cl_image" alt=" " class="img-fluid img-thumbnail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-0 mb-1">
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="field-container">
+                                            <button id="btn_cl_add_crop" type="button" class="btn btn-primary btn-sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Log's crops table -->
+                    <div class="col-12 col-md-8">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Log crops</span>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-css custom-color-field-crop">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Crop Code</th>
+                                            <th scope="col">Common Name</th>
+                                            <th scope="col">Sceintific Name</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Season</th>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody_cl_crops" class="imageTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+
+                <!-- Add Staff -->
+                <div class="row field-div-4">
+                    <!-- Add staff to log form -->
+                    <div class="col-12 col-md-4">
+                        <!-- Form Section -->
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Add a staff</span>
+                            <div class="row">
+                                <div class="col-4"></div>
+                            </div>
+                            <form>
+                                <!-- Staff Id Selection -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-12">
+                                        <div class="field-container">
+                                            <label for="sel_cl_staffId" class="form-label small-label">Staff Id :</label>
+                                            <select class="form-select form-select-sm" id="sel_cl_staffId">
+                                                <option selected disabled>Select a staff</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Name -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_firstName" class="form-label small-label">First Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_firstName"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_lastName" class="form-label small-label">Last Name :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_lastName"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Designation and Role -->
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_designation" class="form-label small-label">Designation :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_designation"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field-container">
+                                            <label for="lbl_cl_role" class="form-label small-label">Role :</label>
+                                            <label class="form-control fixed-height-label small-label" id="lbl_cl_role"></label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                
+                                <div class="row g-0 mb-1">
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="field-container">
+                                            <button id="btn_cl_add_staff" type="button" class="btn btn-primary btn-sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- Log's staff table -->
+                    <div class="col-12 col-md-8">
+                        <div class="bordered-div-1">
+                            <span class="text-center d-block font-weight-bold spans-text">Log staff</span>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-css custom-color-field-crop">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Staff Id</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Designation</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody_cl_staff" class="imageTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>      
+                    </div>
+                </div> 
+
+                <div class="bordered-div-1">
+                    <div class="row g-0 mb-1 justify-content-center">
+                        <div class="col-2">
+                            <div class="field-container">
+                                <label for="field5" class="form-label small-label">Image :</label>
+                                <img id="img_cl_image_observation" alt=" " class="img-fluid img-thumbnail">
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <div class="field-container">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="in_cl_image" accept="image/*" onchange="previewImage(this, '#img_cl_image_observation')">
+                                            <label class="custom-file-label" for="in_cl_image">Choose file</label>
+                                          </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="field-container">
+                                <label for="t-area-observation" class="form-label small-label">Observation :</label><br>
+                                <textarea id="t-area-observation"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="field-container">
+                        <button id="btn_cl_create_log" type="button" class="btn btn-success btn-sm custom-btn">Create Log</button>
+                    </div>
+                </div>  
+                
+            </div>
+        </section>
+
+        <section id="sec_previous_logs" class="sec-field-crops">
+            <div class="container">
+                <div class="row field-div-1">
+                    <div class="col">
+                        <span class="font-size span-text faculty-glyphic-regular custom-color-field-crop small-text">
+                            PREVIOUS LOGS
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="/icons/green shadow.png" alt="green_shadow_image" class="img-fluid img-logo">
+                    </div>
+                </div>
+                <!-- Equipment Table -->
+                <div class="row">
+                    <div class="col">
+                        <div class="table-responsive scrollable-table custom-table-height">
+                            <table class="table table-striped custom-color-equipment">
+                                <thead class="table-header-fixed">
+                                    <tr>
+                                        <th scope="col">Log Code</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Fields</th>
+                                        <th scope="col">Crops</th>
+                                        <th scope="col">Staff</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Observation</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody_previous_logs" class="imageTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+
+        
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/script/jquery-3.7.1.min.js"></script>
+    <script src="/script/script.js"></script>
+    <script src="/controllers/field_details_controller.js"></script>
+    <script src="/controllers/crop_controller.js"></script>
+    <script src="/controllers/staff_controller.js"></script>
+    <script src="/controllers/vehicle_controller.js"></script>
+    <script src="/controllers/equipment_controller.js"></script>
+    <script src="/controllers/field's_crops_controller.js"></script>
+    <script src="controllers/field's_staff_controller.js"></script>
+    <script src="/controllers/create_log_controller.js"></script>
+    <script src="/controllers/previous_logs_controller.js"></script>
+    <script src="/controllers/dashboard_controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/controllers/users_controller.js"></script>
+    
+</body>
+</html>
