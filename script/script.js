@@ -231,20 +231,6 @@ $('#btnLogin').on('click', function() {
       alert(error.responseText);
     }
 
-    $('#nav_previous_logs').on('click', function() {
-    $('#sec_vehicle').hide();
-    $('#sec_equipment').hide();
-    $('#sec_crop').hide();
-    $('#sec_staff').hide();
-    $('#sec_field_crops').hide();
-    $('#sec_field_staff').hide();
-    $('#sec_log').hide();
-    $('#sec_field').hide();
-    $('#sec_previous_logs').show();
-    $('#sec_dashboard').hide();
-    $('#sec_users').hide();
-    loadPreviousLogsTable();
-  });
   })
 });
 
