@@ -414,14 +414,4 @@ main section {
 
 
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 170px;
-    padding-top: 20px;
-    background-color: #0D7C66;
-    transition: width 0.3s;
-    font-size: smaller;
-}
+
