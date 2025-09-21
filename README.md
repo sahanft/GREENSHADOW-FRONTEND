@@ -25,6 +25,8 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
 
+### Maven Parent overrides
+
 
 
 
