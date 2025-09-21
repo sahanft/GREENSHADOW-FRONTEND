@@ -56,6 +56,7 @@
 
 
 
+### Project Description
 ### Purpose of the Project
 
 This is a  system for managing agricultural and animal operations.
@@ -63,7 +64,7 @@ From the structure and files, it’s designed as a Farm System with JWT-based se
 
 ### Key Features (based on controllers & entities)
 
-### 1.Authentication & Security
+### Authentication & Security
 
 * AuthUserController, JWTConfigFilter, SequrityConfig
 
@@ -124,6 +125,10 @@ Provide a secured API for managing an farm business.
 Handle users, staff, plants,animals, fields, equipment, and vehicles.
 
 Keep operation logs and perform system checks.
+
+
+
+
 
 
 
