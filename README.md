@@ -14,6 +14,10 @@ For further reference, please consider the following sections:
 * * [Spring Data JPA](https://docs.spring.io/spring-boot/3.3.5/reference/data/sql.html#data.sql.jpa-and-spring-data)
 * * [Spring Web](https://docs.spring.io/spring-boot/3.3.5/reference/web/servlet.html)
 
+### Guides
+
+The following guides illustrate how to use some features concretely:
+
 
 
 
