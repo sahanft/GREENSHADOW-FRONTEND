@@ -102,7 +102,7 @@ LogController, HealthCheckController
 
 Store operation logs (activities, issues, usage).
 
-System health/status checking.
+
 
 
 
