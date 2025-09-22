@@ -108,7 +108,7 @@ System health/status checking.
 
 DTOs (AnimalDTO, FieldDTO, VehicleDTO…) for data transfer.
 
-Entities (AnimalEntity, UserEntity, etc.) map to database tables.
+
 
 
 
