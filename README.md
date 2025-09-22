@@ -96,7 +96,7 @@ Keep records of equipment and vehicles used in farming.
 
 Likely tracks availability, maintenance, and assignments.
 
-### Logs & Monitoring
+
 
 
 
