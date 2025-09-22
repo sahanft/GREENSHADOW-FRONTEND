@@ -15,7 +15,6 @@ For further reference, please consider the following sections:
 
 * * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.5/maven-plugin)
 
-* * [Create an OCI image](https://docs.spring.io/spring-boot/3.3.5/maven-plugin/build-image.html)
 
 
 
