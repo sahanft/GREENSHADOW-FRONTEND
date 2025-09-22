@@ -84,7 +84,7 @@ Staff roles (StaffRole.java) define different permissions/responsibilities.
 
 FieldController, AnimalController
 
-Manage fields, assign animals and plants to fields.
+
 
 
 
