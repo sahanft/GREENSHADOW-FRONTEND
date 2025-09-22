@@ -120,7 +120,7 @@ AppWideExceptionHandler (typo in file: AddWideExceptionHandler.java) for global 
 
 This project is meant to:
 
-Provide a secured API for managing an farm business.
+
 
 
 
