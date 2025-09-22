@@ -70,7 +70,7 @@ From the structure and files, it’s designed as a Farm System with JWT-based se
 
 * Implements JWT login/authentication to secure APIs.
 
-* Manages user roles (e.g., administrative, manager, scientist, staff).
+
 
 
 
