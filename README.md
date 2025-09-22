@@ -122,7 +122,7 @@ This project is meant to:
 
 Provide a secured API for managing an farm business.
 
-Handle users, staff, plants,animals, fields, equipment, and vehicles.
+
 
 
 
