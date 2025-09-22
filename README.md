@@ -62,7 +62,6 @@ If you manually switch to a different parent and actually want the inheritance, 
 This is a  system for managing agricultural and animal operations.
 From the structure and files, it’s designed as a Farm System with JWT-based security.
 
-### Key Features (based on controllers & entities)
 
 
 
