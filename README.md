@@ -88,7 +88,7 @@ Manage fields, assign animals and plants to fields.
 
 Handle plants and animal data (planting, harvesting, etc.).
 
-### Equipment & Vehicle Management
+
 
 
 
