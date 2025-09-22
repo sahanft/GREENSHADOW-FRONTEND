@@ -110,9 +110,7 @@ DTOs (AnimalDTO, FieldDTO, VehicleDTO…) for data transfer.
 
 Entities (AnimalEntity, UserEntity, etc.) map to database tables.
 
-### Exception Handling
 
-Custom exceptions (CropNotFoundException, DataPersistException, etc.).
 
 
 
