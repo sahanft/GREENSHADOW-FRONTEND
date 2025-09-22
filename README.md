@@ -78,7 +78,7 @@ UserController, StaffController
 
 Create, update, delete, and manage users and staff.
 
-Staff roles (StaffRole.java) define different permissions/responsibilities.
+
 
 
 
