@@ -116,9 +116,6 @@ Custom exceptions (CropNotFoundException, DataPersistException, etc.).
 
 AppWideExceptionHandler (typo in file: AddWideExceptionHandler.java) for global error handling.
 
-### In Summary
-
-This project is meant to:
 
 
 
