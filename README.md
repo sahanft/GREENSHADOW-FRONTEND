@@ -114,7 +114,7 @@ Entities (AnimalEntity, UserEntity, etc.) map to database tables.
 
 Custom exceptions (CropNotFoundException, DataPersistException, etc.).
 
-AppWideExceptionHandler (typo in file: AddWideExceptionHandler.java) for global error handling.
+
 
 
 
