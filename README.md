@@ -50,7 +50,7 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 parent.
 
 
-To prevent this, the project POM contains empty overrides for these elements.
+
 
 
 
