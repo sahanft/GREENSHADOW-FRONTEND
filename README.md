@@ -72,7 +72,7 @@ From the structure and files, it’s designed as a Farm System with JWT-based se
 
 * Manages user roles (e.g., administrative, manager, scientist, staff).
 
-### User & Staff Management
+
 
 
 
