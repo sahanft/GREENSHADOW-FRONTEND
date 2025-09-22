@@ -104,9 +104,7 @@ Store operation logs (activities, issues, usage).
 
 System health/status checking.
 
-### DTO & Entity Layer
 
-DTOs (AnimalDTO, FieldDTO, VehicleDTO…) for data transfer.
 
 
 
