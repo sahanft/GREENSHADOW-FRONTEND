@@ -66,7 +66,7 @@ From the structure and files, it’s designed as a Farm System with JWT-based se
 
 ### Authentication & Security
 
-* AuthUserController, JWTConfigFilter, SequrityConfig
+
 
 
 
