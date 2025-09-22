@@ -92,7 +92,7 @@ Handle plants and animal data (planting, harvesting, etc.).
 
 EquipmentController, VehicleController
 
-Keep records of equipment and vehicles used in farming.
+
 
 
 
