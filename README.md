@@ -76,7 +76,6 @@ From the structure and files, it’s designed as a Farm System with JWT-based se
 
 UserController, StaffController
 
-Create, update, delete, and manage users and staff.
 
 
 
