@@ -17,7 +17,7 @@ For further reference, please consider the following sections:
 
 * * [Create an OCI image](https://docs.spring.io/spring-boot/3.3.5/maven-plugin/build-image.html)
 
-* * [Spring Data JPA](https://docs.spring.io/spring-boot/3.3.5/reference/data/sql.html#data.sql.jpa-and-spring-data)
+
 
 
 
