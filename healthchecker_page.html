@@ -220,6 +220,9 @@
       return { httpStatus: 0, payload: { code: 500, message: err.message, data: null } };
     }
   }
+
+  let currentPage = 0;
+  let pageSize = Number(document.getElementById('pageSize').value);
 </script>
 
 
