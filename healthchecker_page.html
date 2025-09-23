@@ -398,7 +398,19 @@
       }
     });
 
-
+    function populateEditModal(dto) {
+      const form = document.getElementById('editForm');
+      form.reset();
+      form.classList.remove('was-validated');
+      form.id.value = dto.id;
+      form.serviceName.value = dto.serviceName || '';
+      form.status.value = dto.status || '';
+      form.details.value = dto.details || '';
+      document.getElementById('createdAt').textContent = fmtDate(dto.createdAt);
+      document.getElementById('updatedAt').textContent = fmtDate(dto.updatedAt);
+      // reset alerts
+      hideFormAlert('editAlert');
+    }
 
     document.getElementById('editForm').addEventListener('submit', async (ev) => {
       ev.preventDefault();
