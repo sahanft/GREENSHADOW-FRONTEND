@@ -269,6 +269,43 @@
         return;
       }
 
+      const code = result.payload.code ?? result.httpStatus;
+      if (code !== 200) {
+        tbody.innerHTML = `<tr><td colspan="6">Error: ${result.payload.message}</td></tr>`;
+        return;
+      }
+
+      const pageData = result.payload.data || result.payload.data?.content || result.payload.data;
+      // In our controller we put { content, page, size, totalElements, totalPages } inside payload.data
+      const content = result.payload.data ? result.payload.data.content || [] : [];
+
+      // If payload shape differs (older controller), try fallback: payload.data could be the page itself
+      const rows = content.length ? content : (Array.isArray(result.payload.data) ? result.payload.data : []);
+
+      if (rows.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center small-muted">No records found</td></tr>`;
+      } else {
+        for (const r of rows) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${r.id ?? '-'}</td>
+            <td>${escapeHtml(r.serviceName ?? '-') }</td>
+            <td>${escapeHtml(r.status ?? '-') }</td>
+            <td class="text-truncate" style="max-width: 380px">${escapeHtml(r.details ?? '-') }</td>
+            <td>${fmtDate(r.updatedAt ?? r.createdAt)}</td>
+            <td class="text-end">
+              <div class="btn-group btn-group-sm" role="group">
+                <button class="btn btn-outline-primary" data-action="view" data-id="${r.id}"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-outline-secondary" data-action="edit" data-id="${r.id}"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-outline-danger" data-action="delete" data-id="${r.id}"><i class="bi bi-trash"></i></button>
+              </div>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+
   }
 
 
