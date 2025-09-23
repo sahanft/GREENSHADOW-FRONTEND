@@ -462,6 +462,16 @@
       el.className = 'alert d-none';
       el.textContent = '';
     }
+    function hideFormAlert(elId) {
+      const el = document.getElementById(elId);
+      el.className = 'alert d-none';
+      el.textContent = '';
+    }
+
+    async function reloadAll() {
+      await loadHealthOverview();
+      await loadRecords(currentPage, pageSize);
+    }
 
 
 
