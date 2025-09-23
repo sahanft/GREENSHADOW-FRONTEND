@@ -203,7 +203,23 @@
   const API_BASE = "http://localhost:8080";
   document.getElementById('apiBaseDisplay').textContent = API_BASE;
 
-  async function apiFetch(path, opts = {}) {}
+  async function apiFetch(path, opts = {}) {
+    const url = API_BASE + path;
+    try {
+      const res = await fetch(url, opts);
+      const contentType = res.headers.get('Content-Type') || '';
+      if (contentType.includes('application/json')) {
+        const payload = await res.json();
+        // We expect ResponseUtil-like object
+        return { httpStatus: res.status, payload };
+      } else {
+        const txt = await res.text();
+        return { httpStatus: res.status, payload: { code: res.status, message: txt, data: null } };
+      }
+    } catch (err) {
+      return { httpStatus: 0, payload: { code: 500, message: err.message, data: null } };
+    }
+  }
 </script>
 
 
