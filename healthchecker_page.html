@@ -457,6 +457,12 @@
       el.textContent = msg;
       el.classList.remove('d-none');
     }
+    function hideFormAlert(elId) {
+      const el = document.getElementById(elId);
+      el.className = 'alert d-none';
+      el.textContent = '';
+    }
+
 
 
 
