@@ -423,7 +423,19 @@
         status: form.status.value,
         details: form.details.value?.trim() || null
       };
-
+      document.getElementById('editSubmit').disabled = true;
+      const res = await apiFetch(`/health/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      document.getElementById('editSubmit').disabled = false;
+      if ((res.payload?.code ?? res.httpStatus) === 200) {
+        bsModalEdit.hide();
+        await reloadAll();
+      } else {
+        showFormAlert('editAlert', 'danger', res.payload?.message || 'Update failed');
+      }
     });
 
 
