@@ -257,6 +257,18 @@
       document.getElementById('serverMsg').textContent = result.payload?.message || 'No response';
     }
 
+    async function loadRecords(page = 0, size = pageSize) {
+      showTableSpinner(true);
+      const result = await apiFetch(`/health/list?page=${page}&size=${size}`, { method: 'GET' });
+      showTableSpinner(false);
+      const tbody = document.getElementById('recordsBody');
+      tbody.innerHTML = '';
+
+      if (!result.payload) {
+        tbody.innerHTML = `<tr><td colspan="6">No data</td></tr>`;
+        return;
+      }
+
   }
 
 
