@@ -237,6 +237,26 @@
 
   async function loadHealthOverview() {
 
+    const result = await apiFetch('/health', { method: 'GET' });
+    if (result.payload && result.payload.data) {
+      const data = result.payload.data;
+      document.getElementById('appStatus').textContent = data.app || 'OK';
+      document.getElementById('appUptime').textContent = 'uptime: ' + (data.uptimeMillis ? data.uptimeMillis + ' ms' : '-');
+      if (data.database) {
+        document.getElementById('dbStatus').textContent = data.database.status || '—';
+        document.getElementById('dbCount').textContent = 'records: ' + (data.database.recordCount ?? '-');
+      } else {
+        document.getElementById('dbStatus').textContent = '—';
+        document.getElementById('dbCount').textContent = 'records: -';
+      }
+      document.getElementById('serverMsg').textContent = result.payload.message || '-';
+    } else {
+      // fall back to message
+      document.getElementById('appStatus').textContent = 'Unknown';
+      document.getElementById('dbStatus').textContent = 'Unknown';
+      document.getElementById('serverMsg').textContent = result.payload?.message || 'No response';
+    }
+
   }
 
 
