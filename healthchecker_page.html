@@ -473,6 +473,13 @@
       await loadRecords(currentPage, pageSize);
     }
 
+    document.getElementById('btnRefresh').addEventListener('click', reloadAll);
+    document.getElementById('pageSize').addEventListener('change', (ev) => {
+      pageSize = Number(ev.target.value);
+      currentPage = 0; // reset page
+      loadRecords(currentPage, pageSize);
+    });
+
 
 
 
