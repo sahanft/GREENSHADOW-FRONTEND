@@ -366,6 +366,39 @@
       }
     });
 
+    document.getElementById('recordsBody').addEventListener('click', async (ev) => {
+      const btn = ev.target.closest('button');
+      if (!btn) return;
+      const action = btn.dataset.action;
+      const id = btn.dataset.id;
+      if (!id) return;
+
+      if (action === 'view' || action === 'edit') {
+        // load record
+        const res = await apiFetch(`/health/${id}`, { method: 'GET' });
+        if ((res.payload?.code ?? res.httpStatus) !== 200) {
+          alert('Failed to fetch record: ' + (res.payload?.message || 'unknown'));
+          return;
+        }
+        populateEditModal(res.payload.data);
+        bsModalEdit.show();
+        if (action === 'view') {
+          // if view-only, disable inputs (you can toggle later)
+          // but we'll keep editing allowed for convenience
+        }
+      } else if (action === 'delete') {
+        if (!confirm('Delete record #' + id + '? This cannot be undone.')) return;
+        const res = await apiFetch(`/health/${id}`, { method: 'DELETE' });
+        const code = res.payload?.code ?? res.httpStatus;
+        if (code === 200) {
+          await reloadAll();
+        } else {
+          alert('Delete failed: ' + (res.payload?.message || 'unknown'));
+        }
+      }
+    });
+
+
 
 
 
