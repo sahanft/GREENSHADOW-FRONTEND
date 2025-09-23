@@ -412,6 +412,20 @@
       hideFormAlert('editAlert');
     }
 
+    document.getElementById('editForm').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const form = ev.target;
+      if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
+      const id = form.id.value;
+      const data = {
+        id: Number(id),
+        serviceName: form.serviceName.value.trim(),
+        status: form.status.value,
+        details: form.details.value?.trim() || null
+      };
+
+    });
+
 
 
 
