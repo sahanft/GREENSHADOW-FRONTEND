@@ -451,6 +451,15 @@
       }
     });
 
+    function showFormAlert(elId, type, msg) {
+      const el = document.getElementById(elId);
+      el.className = `alert alert-${type}`;
+      el.textContent = msg;
+      el.classList.remove('d-none');
+    }
+
+
+
 
 
 
