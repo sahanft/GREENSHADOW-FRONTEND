@@ -342,6 +342,31 @@
       ul.appendChild(createLi('»', total-1, cur === total-1));
     }
 
+    document.getElementById('createForm').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const form = ev.target;
+      if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
+      const data = {
+        serviceName: form.serviceName.value.trim(),
+        status: form.status.value,
+        details: form.details.value?.trim() || null
+      };
+      document.getElementById('createSubmit').disabled = true;
+      const res = await apiFetch('/health', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      document.getElementById('createSubmit').disabled = false;
+      if ((res.payload?.code ?? res.httpStatus) === 201) {
+        bsModalCreate.hide();
+        await reloadAll();
+      } else {
+        showFormAlert('createAlert', 'danger', res.payload?.message || 'Create failed');
+      }
+    });
+
+
 
 
   }
