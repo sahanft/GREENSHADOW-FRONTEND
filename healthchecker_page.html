@@ -315,6 +315,34 @@
       currentPage = curPage;
     }
 
+    function renderPagination(cur, total) {
+      const ul = document.getElementById('pagination');
+      ul.innerHTML = '';
+      if (total <= 1) return;
+      const createLi = (label, page, disabled=false, active=false) => {
+        const li = document.createElement('li');
+        li.className = 'page-item ' + (disabled ? 'disabled ' : '') + (active ? 'active' : '');
+        const a = document.createElement('a');
+        a.className = 'page-link';
+        a.href = '#';
+        a.dataset.page = page;
+        a.innerText = label;
+        li.appendChild(a);
+        return li;
+      };
+      ul.appendChild(createLi('«', 0, cur === 0));
+      // show a window around cur
+      const windowSize = 5;
+      let start = Math.max(0, cur - Math.floor(windowSize/2));
+      let end = Math.min(total-1, start + windowSize - 1);
+      start = Math.max(0, end - windowSize + 1);
+      for (let p = start; p <= end; p++) {
+        ul.appendChild(createLi(p+1, p, false, p === cur));
+      }
+      ul.appendChild(createLi('»', total-1, cur === total-1));
+    }
+
+
 
   }
 
