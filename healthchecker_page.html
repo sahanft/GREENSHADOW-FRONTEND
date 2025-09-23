@@ -305,6 +305,16 @@
         }
       }
 
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+      const pager = result.payload.data || {};
+      const curPage = pager.page ?? page;
+      const totalPages = pager.totalPages ?? Math.ceil((pager.totalElements ?? rows.length) / size);
+      renderPagination(curPage, totalPages);
+      // Save current
+      currentPage = curPage;
+    }
+
 
   }
 
