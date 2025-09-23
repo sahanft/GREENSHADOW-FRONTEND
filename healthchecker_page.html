@@ -498,6 +498,13 @@
               .replaceAll("'", '&#039;');
     }
 
+    (async function init(){
+      try {
+        await reloadAll();
+      } catch (err) {
+        console.error(err);
+      }
+    })();
 
 
 
