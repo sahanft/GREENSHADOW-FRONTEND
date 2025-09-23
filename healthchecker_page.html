@@ -113,6 +113,47 @@
 </main>
 
 
+<div class="modal fade" id="modalCreate" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form id="createForm" class="needs-validation" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title">Create Health Record</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="createAlert" class="alert d-none"></div>
+          <div class="mb-3">
+            <label class="form-label">Service Name</label>
+            <input name="serviceName" required maxlength="100" class="form-control" />
+            <div class="invalid-feedback">Service name is required</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select name="status" required class="form-select">
+              <option value="">Select...</option>
+              <option>UP</option>
+              <option>DEGRADED</option>
+              <option>DOWN</option>
+            </select>
+            <div class="invalid-feedback">Status is required</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Details</label>
+            <textarea name="details" rows="4" class="form-control" maxlength="2000"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="createSubmit" type="submit" class="btn btn-success">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
