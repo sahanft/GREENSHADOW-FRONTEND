@@ -480,6 +480,14 @@
       loadRecords(currentPage, pageSize);
     });
 
+    document.getElementById('pagination').addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const a = ev.target.closest('a');
+      if (!a) return;
+      const page = Number(a.dataset.page ?? currentPage);
+      loadRecords(page, pageSize);
+    });
+
 
 
 
