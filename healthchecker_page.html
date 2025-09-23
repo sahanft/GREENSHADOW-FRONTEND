@@ -229,6 +229,10 @@
   const bsModalCreate = new bootstrap.Modal(modalCreateEl);
   const bsModalEdit = new bootstrap.Modal(modalEditEl);
 
+  function showTableSpinner(show = true) {
+    document.getElementById('tableSpinner').classList.toggle('d-none', !show);
+  }
+
 
 
 </script>
